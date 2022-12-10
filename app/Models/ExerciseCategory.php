@@ -10,4 +10,9 @@ class ExerciseCategory extends Model
     use HasFactory;
 
     protected $fillable = ['name'];
+
+    public function exercises()
+    {
+        return $this->morphOne(Exercise::class, 'exercisable');
+    }
 }

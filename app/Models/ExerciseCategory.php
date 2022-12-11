@@ -11,8 +11,4 @@ class ExerciseCategory extends Model
 
     protected $fillable = ['name'];
 
-    public function exercises()
-    {
-        return $this->morphOne(Exercise::class, 'exercisable');
-    }
 }

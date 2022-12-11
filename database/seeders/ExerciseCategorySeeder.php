@@ -2,9 +2,8 @@
 
 namespace Database\Seeders;
 
-use App\Models\ExerciseCategory;
-use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
+use Illuminate\Support\Facades\DB;
 
 class ExerciseCategorySeeder extends Seeder
 {
@@ -15,7 +14,7 @@ class ExerciseCategorySeeder extends Seeder
      */
     public function run()
     {
-        ExerciseCategory::createMany([
+        DB::table('exercise_categories')->insert([
             [
                 'name' => 'Abs'
             ],

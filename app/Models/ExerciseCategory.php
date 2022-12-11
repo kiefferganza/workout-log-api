@@ -13,6 +13,7 @@ class ExerciseCategory extends Model
 
     public function exercises()
     {
-        return $this->morphOne(Exercise::class, 'exercisable');
+        return $this->hasMany(Exercise::class);
     }
+
 }

@@ -13,7 +13,7 @@ class ExerciseCategory extends Model
 
     public function exercises()
     {
-        return $this->hasMany(Exercise::class);
+        return $this->hasMany(Exercise::class, 'category_id');
     }
 
 }

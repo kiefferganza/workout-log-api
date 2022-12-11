@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\ExerciseCategoryController;
+use App\Http\Controllers\ExerciseController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -18,6 +20,5 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-Route::resources([
-    'exercise-category' => \App\Http\Controllers\ExerciseCategoryController::class,
-]);
+Route::resource('exercise-category', ExerciseCategoryController::class);
+Route::resource('exercise', ExerciseController::class);
